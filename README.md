@@ -12,11 +12,11 @@ Doesn't seem to work at the moment with the stock OSX LLVM; I'm using the most r
 
 Afterwards install the binutils version from this package using brew
 
-    brew install binutils-arm-none-linux-gnueabihf.rb
+    brew install binutils-armv7-none-linux-gnueabihf.rb
 
 And then it works! For me at least.... If you want to try this with another version of ubuntu.... You need to copy the /usr/lib, /usr/include and /lib directories from the pandaboard to this directory.
 However first they need to contain the development headerfiles etc (I'm not exactly sure what), an {apt-get install llvm} on the pandaboard seemed to do the trick (add the universal aptitude source first).
 
 Compilation done by
 
-    #PATH_TO_WORKING_DIR#/llvm_install/bin/clang --target=arm-none-linux-gnueabihf --sysroot=#PATH_TO_WORKING_DIR#/panda source.c
+    #PATH_TO_WORKING_DIR#/llvm_install/bin/clang --target=armv7-none-linux-gnueabihf --sysroot=#PATH_TO_WORKING_DIR#/panda source.c

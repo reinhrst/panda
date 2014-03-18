@@ -1,14 +1,14 @@
 require 'formula'
 require 'shellwords'
 
-class BinutilsArmNoneLinuxGnueabihf < Formula
+class BinutilsArmv7NoneLinuxGnueabihf < Formula
   homepage 'http://www.gnu.org/software/binutils/binutils.html'
   url 'http://ftpmirror.gnu.org/binutils/binutils-2.24.tar.gz'
   mirror 'http://ftp.gnu.org/gnu/binutils/binutils-2.24.tar.gz'
   sha1 '1b2bc33003f4997d38fadaa276c1f0321329ec56'
 
   def install
-    target='arm-none-linux-gnueabihf'
+    target='armv7-none-linux-gnueabihf'
     sysroot=File.dirname(__FILE__)
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
